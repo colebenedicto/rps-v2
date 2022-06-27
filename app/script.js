@@ -1,18 +1,7 @@
-/* 
-ROCK, PAPER SCISSORS
+let compScore = 0;
+let playerScore = 0;
 
-Players
-  Computer
-    Randomize between rock, paper, and scissors
-  User
-    Get input from user through form field (use the .toLowerCase() or .toHigherCase())
-
-Round
-  -evaluates the winner and loser between the computer choice and player for each round
-
-Game
-  -evaluates a winner and loser after n number of rounds (n === 5)
-*/
+game();
 
 function computerPlay() {
     const choices = ['rock', 'paper', 'scissors'];
@@ -20,23 +9,22 @@ function computerPlay() {
     return choices[num];
 }
 
-let compScore = 0;
-let playerScore = 0;
-
 function playRound(playerSelection, compSelection) {
-
     if ((playerSelection === 'rock' && compSelection === 'scissors') ||
         (playerSelection === 'paper' && compSelection === 'rock') ||
         (playerSelection === 'scissors' && compSelection === 'paper')) {
         playerScore++;
-        return 'player wins!';
+        return 'Player wins! \n' +
+            `Score: You: ${playerScore} | Computer: ${compScore}`;
     } else if ((compSelection === 'rock' && playerSelection === 'scissors') ||
         (compSelection === 'paper' && playerSelection === 'rock') ||
         (compSelection === 'scissors' && playerSelection === 'paper')) {
         compScore++;
-        return 'computer wins!';
+        return 'Computer wins! \n' +
+            `Score: You: ${playerScore} | Computer: ${compScore}`;
     } else {
-        return 'it\'s a tie!'
+        return 'it\'s a tie! \n' +
+            `Score: You: ${playerScore} | Computer: ${compScore}`;
     } 
 }
 
@@ -48,10 +36,6 @@ function game() {
     }
 
     console.log(
-        `Game over! ${playerScore === 5 ? 'Player' : 'Computer'} wins! \n
-        Score: Player: ${playerScore} | Computer: ${compScore}`
-    );
-
+        `Game over! ${playerScore === 5 ? 'You win!' : 'You Lose!'} \n` +
+        `Score: Player: ${playerScore} | Computer: ${compScore}`);
 }
-
-game();
