@@ -37,5 +37,5 @@ function game() {
 
     console.log(
         `Game over! ${playerScore === 5 ? 'You win!' : 'You Lose!'} \n` +
-        `Score: Player: ${playerScore} | Computer: ${compScore}`);
+        `Score: You: ${playerScore} | Computer: ${compScore}`);
 }
