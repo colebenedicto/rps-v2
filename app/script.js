@@ -1,7 +1,26 @@
+let playerPick;
+
+const rockBtn = document.querySelector('.rock-btn');
+const paperBtn = document.querySelector('.paper-btn');
+const sciBtn = document.querySelector('.sci-btn');
+
+rockBtn.addEventListener('click', () => {
+    playerPick = 'rock';
+    console.log(playRound(playerPick, computerPlay()));
+});
+
+paperBtn.addEventListener('click', () => {
+    playerPick = 'paper';
+    console.log(playRound(playerPick, computerPlay()));
+});
+
+sciBtn.addEventListener('click', () => {
+    playerPick = 'scissors';
+    console.log(playRound(playerPick, computerPlay()));
+});
+
 let compScore = 0;
 let playerScore = 0;
-
-game();
 
 function computerPlay() {
     const choices = ['rock', 'paper', 'scissors'];
@@ -28,14 +47,18 @@ function playRound(playerSelection, compSelection) {
     } 
 }
 
-function game() {
-    while (Math.max(playerScore, compScore) < 5) {
-        let compChoice = computerPlay();
-        let playerChoice = prompt('Choose your weapon').toLowerCase();
-        console.log(playRound(playerChoice, compChoice));
-    }
 
-    console.log(
-        `Game over! ${playerScore === 5 ? 'You win!' : 'You Lose!'} \n` +
-        `Score: You: ${playerScore} | Computer: ${compScore}`);
-}
+
+// game();
+
+// function game() {
+//     while (Math.max(playerScore, compScore) < 5) {
+//         let compChoice = computerPlay();
+//         let playerChoice = prompt('Choose your weapon').toLowerCase();
+//         console.log(playRound(playerChoice, compChoice));
+//     }
+
+//     console.log(
+//         `Game over! ${playerScore === 5 ? 'You win!' : 'You Lose!'} \n` +
+//         `Score: You: ${playerScore} | Computer: ${compScore}`);
+// }
