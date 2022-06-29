@@ -30,6 +30,9 @@ function game() {
 }
 
 function reset() {
+    compScore = 0;
+    playerScore = 0;
+    
     const newGame = document.createElement('button');
     newGame.textContent = 'New Game';
     message.appendChild(newGame);
