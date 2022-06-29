@@ -1,23 +1,8 @@
-let playerPick;
 
 const rockBtn = document.querySelector('.rock-btn');
 const paperBtn = document.querySelector('.paper-btn');
 const sciBtn = document.querySelector('.sci-btn');
-
-rockBtn.addEventListener('click', () => {
-    playerPick = 'rock';
-    console.log(playRound(playerPick, computerPlay()));
-});
-
-paperBtn.addEventListener('click', () => {
-    playerPick = 'paper';
-    console.log(playRound(playerPick, computerPlay()));
-});
-
-sciBtn.addEventListener('click', () => {
-    playerPick = 'scissors';
-    console.log(playRound(playerPick, computerPlay()));
-});
+const buttons = document.querySelectorAll('.buttons button');
 
 let compScore = 0;
 let playerScore = 0;
@@ -47,18 +32,35 @@ function playRound(playerSelection, compSelection) {
     } 
 }
 
+    let playerPick;
+
+    // rockBtn.addEventListener('click', () => {
+    //     playerPick = 'rock';
+    // });
+
+    // paperBtn.addEventListener('click', () => {
+    //     playerPick = 'paper';
+    // });
+
+    // sciBtn.addEventListener('click', () => {
+    //     playerPick = 'scissors';
+    // });
 
 
-// game();
 
-// function game() {
-//     while (Math.max(playerScore, compScore) < 5) {
-//         let compChoice = computerPlay();
-//         let playerChoice = prompt('Choose your weapon').toLowerCase();
-//         console.log(playRound(playerChoice, compChoice));
-//     }
+function game() {
+    buttons.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            playerPick = btn.id;
+            let compChoice = computerPlay();
+            console.log(playRound(playerPick, compChoice));
+        });
+    });
+   
 
-//     console.log(
-//         `Game over! ${playerScore === 5 ? 'You win!' : 'You Lose!'} \n` +
-//         `Score: You: ${playerScore} | Computer: ${compScore}`);
-// }
+    console.log(
+        `Game over! ${playerScore === 5 ? 'You win!' : 'You Lose!'} \n` +
+        `Score: You: ${playerScore} | Computer: ${compScore}`);
+}
+
+game();
