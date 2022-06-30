@@ -1,0 +1,80 @@
+html {
+  font-size: 100%; //lets the user control the zoom level in their browser
+  box-sizing: border-box; //makes the size of the elements include padding and border width in the final width
+}
+
+*, *::after, *::before {
+  box-sizing: inherit;
+  color: $white;
+}
+
+a, a:visited, a:hover {
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Public sans', sans-serif;
+  // font-size: $font-sm;
+  font-weight: 300;
+  background-color: $darkNavyBlue;
+  // color: $white;
+  line-height: 1.3;
+  overflow-x: hidden;
+
+  // &.noscroll { // CSS for not allowing scroll while mobile menu is open. Added via JS
+  //   overflow: hidden;
+  // }
+
+  // @include breakpoint-up(medium) {
+  //   font-size: $font-med;
+  // }
+}
+
+h1, h2, h3 {
+  font-weight: 300;
+  line-height: 1.15;
+  color: $vividSkyBlue;
+  margin-top: 0rem;
+}
+
+h1 {
+  font-size: 2.3125rem;
+  margin-bottom: 1.5rem;
+
+  // @include breakpoint-up(large) {
+  //   font-size: $font-xlar;
+  // }
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5625rem;
+
+  // @include breakpoint-up(large) {
+  //   font-size: 2.25rem;
+  //   margin-bottom: 2.25rem;
+  // }
+}
+
+.flex {
+  display: flex;
+
+  &-jc-sb {
+    justify-content: space-between;
+  }
+
+  &-jc-c {
+    justify-content: center;
+  }
+
+  &-ai-c {
+    align-items: center;
+  }
+}
+
+.button button {
+  color: $redSalsa;
+  border: ;
+}
