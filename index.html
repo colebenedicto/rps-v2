@@ -9,23 +9,52 @@
   <link rel="stylesheet" href="app/style.css">
 </head>
 <body>
-  <!-- create 3 buttons for rock paper scissors and use that to play a round -->
-  <h1>Rock Paper Scissors</h1>
-  <p>First to reach 5 wins</p>
+  <!-- <div class="welcome-page">
+    <h1>rock paper scissors.</h1>
+    <button>Start Game</button>
+  </div> -->
+  
+  <div class="game-page">
+    <div class="game-title">
+      <h1>rock paper scissors.</h1>
+    </div>
+    <div class="sections flex">
 
-  <div class="scores flex">
-    <p class="player-score">You: </p>
-    <p class="comp-score">Computer: </p>
+      <div class="results">
+        <div class="message">Start!</div>
+        <div class="scores flex">
+          <div class="player-status">
+            <p class="player-score">You: </p>
+            <img src="" alt="Player's pick">
+          </div>
+          <div class="computer-status">
+            <p class="comp-score">Computer: </p>
+            <img src="" alt="Computer's pick">
+          </div>
+        </div>
+      </div>
+
+      <div class="selection">
+        <p>First to score 5 wins! <br>
+          Choose your weapon:</p>
+        <div class="buttons flex-vertical">
+          <button class="choice rock-btn" id="rock">Rock</button>
+          <button class="choice paper-btn" id="paper">Paper</button>
+          <button class="choice  sci-btn" id="scissors">Scissors</button>
+        </div>
+        <button class="restart-button">Restart</button>
+      </div>
+
+    </div>
   </div>
 
-  <div class="buttons flex">
-    <button class="choice rock-btn" id="rock">Rock</button>
-    <button class="choice paper-btn" id="paper">Paper</button>
-    <button class="choice  sci-btn" id="scissors">Scissors</button>
-  </div>
-
-  <div class="message">
-    <div> </div>
+  <div class="footer">
+    <p>2022 © <a href="https://github.com/colesprojects">colesprojects</a></p>
   </div>
 </body>
 </html>
+
+<!-- 
+  Aight, design your ui first since you have the logic for the main part set up already
+  then you can proceed here.
+ -->

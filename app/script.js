@@ -2,7 +2,8 @@
 const playerTally = document.querySelector('.player-score');
 const computerTally = document.querySelector('.comp-score');
 const buttons = document.querySelectorAll('.buttons .choice');
-const message = document.querySelector('.message div');
+const message = document.querySelector('.message');
+const restart = document.querySelector('.restart-button');
 
 let compScore = 0;
 let playerScore = 0;
@@ -32,11 +33,8 @@ function game() {
 function reset() {
     compScore = 0;
     playerScore = 0;
-    
-    const newGame = document.createElement('button');
-    newGame.textContent = 'New Game';
-    message.appendChild(newGame);
-    newGame.addEventListener('click', () => {
+
+    restart.addEventListener('click', () => {
         playerTally.textContent = 'You: ';
         computerTally.textContent = 'Computer: ';
         message.innerHTML = '';
@@ -61,10 +59,17 @@ function playRound(playerSelection, compSelection) {
         (compSelection === 'paper' && playerSelection === 'rock') ||
         (compSelection === 'scissors' && playerSelection === 'paper')) {
         compScore++;
-        return 'Computer wins!';
+        return 'You Lose.';
     } else {
         return 'it\'s a tie !';
     } 
 }
 
 game();
+
+/* 
+Functionalities to add in the next version/update:
+ -- startGame() - runs only every time the website is opened or refreshed
+ -- endGame() - ends game; disables buttons until 'New Game' button is clicked;
+ -- "New Game" modal 
+*/
