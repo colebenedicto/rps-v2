@@ -24,7 +24,7 @@ function game() {
                 let endMessage = document.createElement('p');
                 endMessage.textContent = `Game over! ${playerScore > compScore ? 'You win!' : 'Computer wins!'}`;
                 message.appendChild(endMessage);
-                reset();
+                restart.addEventListener('click', reset());
             }
         });
     });
@@ -33,13 +33,10 @@ function game() {
 function reset() {
     compScore = 0;
     playerScore = 0;
-
-    restart.addEventListener('click', () => {
-        playerTally.textContent = 'You: ';
-        computerTally.textContent = 'Computer: ';
-        message.innerHTML = '';
-        game();
-    });
+    playerTally.textContent = 'You: ';
+    computerTally.textContent = 'Computer: ';
+    message.innerHTML = 'Start';
+    game();
 }
 
 restart.addEventListener('click', () => {
