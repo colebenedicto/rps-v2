@@ -6,12 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rock Paper Scissors Game</title>
   <script src="app/js/script.js" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Iceberg&family=Jaldi&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="dist/style.css">
 </head>
-<body>
-  <!-- <div class="welcome-page">
+<body class="flex flex-dir-col">
+  <!-- <div class="main-page">
     <h1>rock paper scissors.</h1>
-    <button>Start Game</button>
+    <button class="start-button start-game">Start Game</button>
   </div> -->
   
   <div class="game-page">
@@ -21,28 +22,28 @@
     <div class="sections flex">
 
       <div class="results">
-        <div class="message">Start!</div>
+        <div class="message vividSBOutline">Rock beats Scissors!</div>
         <div class="scores flex">
-          <div class="player-status">
-            <p class="player-score">You: </p>
-            <img src="" alt="Player's pick">
+          <div class="player-status flex flex-dir-col flex-ai-c">
+            <p class="player-score vividSBOutline">You: </p>
+            <img src="images/rock-player.png" alt="Player's pick">
           </div>
-          <div class="computer-status">
-            <p class="comp-score">Computer: </p>
-            <img src="" alt="Computer's pick">
+          <div class="computer-status flex flex-dir-col flex-ai-c">
+            <p class="comp-score vividSBOutline">Computer: </p>
+            <img src="images/rock-comp.png" alt="Computer's pick">
           </div>
         </div>
       </div>
 
-      <div class="selection">
-        <p>First to score 5 wins! <br>
+      <div class="selection flex flex-dir-col">
+        <p class="redSalsaOutline">First to score 5 wins! <br>
           Choose your weapon:</p>
-        <div class="buttons flex-vertical">
+        <div class="buttons flex flex-dir-col flex-ai-c">
           <button class="choice rock-btn" id="rock">Rock</button>
           <button class="choice paper-btn" id="paper">Paper</button>
           <button class="choice  sci-btn" id="scissors">Scissors</button>
         </div>
-        <button class="restart-button">Restart</button>
+        <button class="start-button restart">Restart</button>
       </div>
 
     </div>

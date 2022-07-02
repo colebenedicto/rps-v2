@@ -1,0 +1,86 @@
+.game-page {
+  margin: 11.875rem 21.875rem;
+
+  & .game-title h1{
+    font-weight: 400;
+    font-size: 4rem;
+  }
+}
+
+.sections {
+  margin-top: 4.6875rem;
+  margin-right: 4.6875rem;
+  
+  & .results {
+    width: 46.875rem;
+    height: 33.9375rem;
+    background-color: rgba(255, 255, 255, 0.08);
+    border-radius: 1.5625rem;
+  }
+
+  & .message {
+    margin: 4.0625rem 0;
+    text-align: center;
+  }
+
+  & .scores {
+    & img {
+    height: 15.625rem;
+    }
+
+    & .player-status, .computer-status {
+      flex-grow: 1;
+    }
+  }
+}
+
+// Selection
+
+.selection {
+  margin-left: 9.5rem;
+
+  & p {
+    text-align: center;
+    line-height: 30px;
+    font-size: 1.5625rem;
+    margin: 2.0625rem 0 2.5625rem;
+  }
+
+  & .buttons {
+    display: flex;
+    gap: 2rem;
+  
+    & button {
+      color: $redSalsa;
+      width: 12.6875rem;
+      height: 3.25rem;
+      font-size: 25px;
+      border: 6px solid $redSalsa;
+      border-radius: 20px;
+
+      &:hover{
+        width: 13.4375rem;
+        height: 3.4375rem;
+        color: $vividSkyBlue;
+        border-color: $vividSkyBlue;
+      }
+    }
+  }
+}
+
+.restart {
+  font-size: 1.75rem;
+  background-color: $redSalsa;
+  width: 15.6875rem;
+  height: 4.25rem;
+  border: 7px solid #F38A75;
+  border-radius: 1.5625rem;
+  margin-bottom: 1.4375rem;
+  // flex-grow: 1;
+
+  &:hover{
+    background-color: $vividSkyBlue;
+    border-color: $vividSkyBlue;
+  }
+}
+

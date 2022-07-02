@@ -61,7 +61,7 @@ function playRound(playerSelection, compSelection) {
         compScore++;
         return 'You Lose.';
     } else {
-        return 'it\'s a tie !';
+        return 'It\'s a tie!';
     } 
 }
 

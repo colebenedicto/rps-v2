@@ -6,4 +6,16 @@ $salmon: hsl(10, 84%, 71%);
 $redSalsa: hsl(0, 85%, 63%);
 $white: hsl(0, 0%, 100%);
 
-// Font sizes
+// Mix-ins
+
+@mixin stroke($color, $size) { //outside stroke emulated by 8-axis text shadow => https://stackoverflow.com/questions/26634201/add-stroke-around-text-on-the-outside-with-css
+  text-shadow:
+    -#{$size} -#{$size} 0 $color,
+     0        -#{$size} 0 $color,
+     #{$size} -#{$size} 0 $color,
+     #{$size}  0        0 $color,
+     #{$size}  #{$size} 0 $color,
+     0         #{$size} 0 $color,
+    -#{$size}  #{$size} 0 $color,
+    -#{$size}  0        0 $color;
+}

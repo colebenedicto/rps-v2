@@ -6,23 +6,35 @@ html {
 *, *::after, *::before {
   box-sizing: inherit;
   color: $white;
+  margin: 0;
+  padding: 0;
 }
 
 a, a:visited, a:hover {
   text-decoration: none;
 }
 
+button {
+  font-family: 'Iceberg', 'sans-serif';
+
+  &:hover {
+    background-color: $white;
+  }
+}
+
+
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Public sans', sans-serif;
+  font-family: 'Jaldi', sans-serif;
   // font-size: $font-sm;
   font-weight: 300;
   background-color: $darkNavyBlue;
-  // color: $white;
   line-height: 1.3;
   overflow-x: hidden;
-
+  font-size: 1.875rem; 
+  letter-spacing: 0.05em;
+  min-height: 100vh;
   // &.noscroll { // CSS for not allowing scroll while mobile menu is open. Added via JS
   //   overflow: hidden;
   // }
@@ -32,37 +44,24 @@ body {
   // }
 }
 
-h1, h2, h3 {
-  font-weight: 300;
-  line-height: 1.15;
-  color: $vividSkyBlue;
-  margin-top: 0rem;
-}
-
 h1 {
-  font-size: 2.3125rem;
-  margin-bottom: 1.5rem;
-
-  // @include breakpoint-up(large) {
-  //   font-size: $font-xlar;
-  // }
-}
-
-h2 {
-  font-size: 2rem;
-  margin-bottom: 1.5625rem;
-
-  // @include breakpoint-up(large) {
-  //   font-size: 2.25rem;
-  //   margin-bottom: 2.25rem;
-  // }
+  font-family: 'Iceberg', 'sans-serif';
+  color: $vividSkyBlue;
 }
 
 .flex {
   display: flex;
 
+  &-dir-col {
+    flex-direction: column;
+  }
+
   &-jc-sb {
     justify-content: space-between;
+  }
+
+  &-jc-sa {
+    justify-content: space-around;
   }
 
   &-jc-c {
@@ -74,7 +73,23 @@ h2 {
   }
 }
 
-.button button {
-  color: $redSalsa;
-  border: ;
+.footer {
+  & p, a{
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.2);
+    text-align: center;
+
+    &:hover {
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+  }
+}
+
+.vividSBOutline {
+  @include stroke($vividSkyBlue, .0625rem);
+}
+
+.redSalsaOutline {
+  @include stroke($redSalsa, .0625rem);
 }
