@@ -47,6 +47,10 @@ body {
 h1 {
   font-family: 'Iceberg', 'sans-serif';
   color: $vividSkyBlue;
+
+  & span { //h1
+    color: $redSalsa;
+  }
 }
 
 .flex {
@@ -74,10 +78,16 @@ h1 {
 }
 
 .footer {
+  width: 100%; //https://stackoverflow.com/questions/25671073/footer-below-content-but-not-floating-mid-air-if-not-enough-content
+  height: 40px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+
   & p, a{
     font-size: 1.25rem;
-    color: rgba(255, 255, 255, 0.2);
-    text-align: center;
+    color: rgba(255, 255, 255, 0.1);
 
     &:hover {
       color: rgba(255, 255, 255, 0.6);

@@ -3,7 +3,7 @@ const playerTally = document.querySelector('.player-score');
 const computerTally = document.querySelector('.comp-score');
 const buttons = document.querySelectorAll('.buttons .choice');
 const message = document.querySelector('.message');
-const restart = document.querySelector('.restart-button');
+const restart = document.querySelector('.restart');
 
 let compScore = 0;
 let playerScore = 0;
@@ -41,6 +41,13 @@ function reset() {
         game();
     });
 }
+
+restart.addEventListener('click', () => {
+    playerTally.textContent = 'You: ';
+    computerTally.textContent = 'Computer: ';
+    message.innerHTML = 'Start!';
+    game();
+});
 
 function computerPlay() {
     const choices = ['rock', 'paper', 'scissors'];

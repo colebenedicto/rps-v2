@@ -19,13 +19,19 @@
   }
 
   & .message {
-    margin: 4.0625rem 0;
+    height: 5rem;
+    margin: 4.0625rem 0 1.5625rem;
     text-align: center;
   }
 
   & .scores {
     & img {
     height: 15.625rem;
+
+      &:hover {
+        transform: scale(1.05);
+        transition: all 20ms ease-in-out;
+      }
     }
 
     & .player-status, .computer-status {
@@ -59,10 +65,10 @@
       border-radius: 20px;
 
       &:hover{
-        width: 13.4375rem;
-        height: 3.4375rem;
+        transform: scale(1.08);
         color: $vividSkyBlue;
         border-color: $vividSkyBlue;
+        transition: all 200ms ease-in-out;
       }
     }
   }
@@ -75,12 +81,14 @@
   height: 4.25rem;
   border: 7px solid #F38A75;
   border-radius: 1.5625rem;
-  margin-bottom: 1.4375rem;
-  // flex-grow: 1;
+  margin-top: 5rem;
+  
 
   &:hover{
     background-color: $vividSkyBlue;
-    border-color: $vividSkyBlue;
+    border-color: $skyBlue;
+    transform: scale(1.05);
+    transition: all 300ms ease-in-out;
   }
 }
 

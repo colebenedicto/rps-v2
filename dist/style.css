@@ -42,6 +42,10 @@ h1 {
   color: #45c4f2;
 }
 
+h1 span {
+  color: #f15050;
+}
+
 .flex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -78,10 +82,18 @@ h1 {
           align-items: center;
 }
 
+.footer {
+  width: 100%;
+  height: 40px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+}
+
 .footer p, .footer a {
   font-size: 1.25rem;
-  color: rgba(255, 255, 255, 0.2);
-  text-align: center;
+  color: rgba(255, 255, 255, 0.1);
 }
 
 .footer p:hover, .footer a:hover {
@@ -115,8 +127,16 @@ h1 {
   border: 10px solid #f15050;
   border-radius: 25px;
   font-size: 2.1875rem;
-  margin-top: 6.25rem;
+  margin-top: 5rem;
   text-shadow: -0.125rem -0.125rem 0 #f15050, 0 -0.125rem 0 #f15050, 0.125rem -0.125rem 0 #f15050, 0.125rem 0 0 #f15050, 0.125rem 0.125rem 0 #f15050, 0 0.125rem 0 #f15050, -0.125rem 0.125rem 0 #f15050, -0.125rem 0 0 #f15050;
+}
+
+.start-game:hover {
+  text-shadow: -0.125rem -0.125rem 0 #45c4f2, 0 -0.125rem 0 #45c4f2, 0.125rem -0.125rem 0 #45c4f2, 0.125rem 0 0 #45c4f2, 0.125rem 0.125rem 0 #45c4f2, 0 0.125rem 0 #45c4f2, -0.125rem 0.125rem 0 #45c4f2, -0.125rem 0 0 #45c4f2;
+  border-color: #45c4f2;
+  background-color: #5bd7f5;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
 }
 
 .game-page {
@@ -141,12 +161,20 @@ h1 {
 }
 
 .sections .message {
-  margin: 4.0625rem 0;
+  height: 5rem;
+  margin: 4.0625rem 0 1.5625rem;
   text-align: center;
 }
 
 .sections .scores img {
   height: 15.625rem;
+}
+
+.sections .scores img:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-transition: all 20ms ease-in-out;
+  transition: all 20ms ease-in-out;
 }
 
 .sections .scores .player-status, .sections .scores .computer-status {
@@ -183,10 +211,12 @@ h1 {
 }
 
 .selection .buttons button:hover {
-  width: 13.4375rem;
-  height: 3.4375rem;
+  -webkit-transform: scale(1.08);
+          transform: scale(1.08);
   color: #45c4f2;
   border-color: #45c4f2;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
 }
 
 .restart {
@@ -196,11 +226,15 @@ h1 {
   height: 4.25rem;
   border: 7px solid #F38A75;
   border-radius: 1.5625rem;
-  margin-bottom: 1.4375rem;
+  margin-top: 5rem;
 }
 
 .restart:hover {
   background-color: #45c4f2;
-  border-color: #45c4f2;
+  border-color: #5bd7f5;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
 }
 /*# sourceMappingURL=style.css.map */
