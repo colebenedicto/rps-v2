@@ -1,0 +1,16 @@
+.blinkText {
+  @include stroke($redSalsa, .0625rem);
+  transform: scale(1.05);
+}
+
+.blinkIcon {
+  transform: scale((1.05));
+}
+
+// .hideSection {
+
+// }
+
+// .showSection {
+
+// }

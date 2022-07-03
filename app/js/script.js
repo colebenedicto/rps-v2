@@ -23,7 +23,7 @@ buttons.forEach((button) => {
 
         compChoice = computerPlay();
         roundWinner = playRound(playerChoice, compChoice); 
-        updateScore();
+        updateScoreAndMessage();
         updateRPSIcons(playerChoice, compChoice);
 
         if (Math.max(playerScore, compScore) === 5) {
@@ -32,13 +32,24 @@ buttons.forEach((button) => {
     });
 });
 
-function updateScore() {
+restart.addEventListener('click', () => {
+    playerTally.textContent = 'You: ';
+    computerTally.textContent = 'Computer: ';
+    message.innerHTML = 'Start!';
+    buttonsDisabled(false);
+    playerScore = 0;
+    compScore = 0;
+    playerIcon.src = 'images/rock-player.png';
+    compIcon.src = 'images/rock-comp.png';
+}); 
+
+function updateScoreAndMessage() {
   if (roundWinner === 'tie') {
-    message.textContent = "It's a tie!"
+    message.textContent = `It's a tie! ${capitalizeFirstLetter(playerChoice)} ties with ${compChoice}.`;
   } else if (roundWinner === 'player') {
-    message.textContent = 'You won!'
+    message.textContent = `You win! ${capitalizeFirstLetter(playerChoice)} beats ${compChoice}.`;
   } else if (roundWinner === 'computer') {
-    message.textContent = 'You lost!'
+    message.textContent = `You lose! ${capitalizeFirstLetter(compChoice)} is beaten by ${playerChoice}.`;
   }
 
   playerTally.textContent = `You: ${playerScore}`;
@@ -76,12 +87,10 @@ function buttonsDisabled(isFalse) {
     });
 }
 
-restart.addEventListener('click', () => {
-    playerTally.textContent = 'You: ';
-    computerTally.textContent = 'Computer: ';
-    message.innerHTML = 'Start!';
-    buttonsDisabled(false);
-}); 
+function capitalizeFirstLetter(word) {
+    return word[0].toUpperCase() + word.slice(1);
+}
+
 
 function endGame() {
     buttonsDisabled(true);
@@ -115,13 +124,16 @@ function playRound(playerSelection, compSelection) {
     } 
 }
 
-// game();
-
 /* 
 Functionalities to add in the next version/update:
  updateRoundMessage function that does: _ beats _, _ is beaten by _, _ ties with _.
 */
 
-// eventListener for playerTall, compTally, and message to blink every time they're updated
+// eventListener for message, playerTall, compTally, playerIcon, and compIcon to add a class that animates them every time they're updated
 
-//  I really just need to know how the addEventListener works.
+
+// Animations
+
+// message.addEventListener('change', () => {
+//     // get all the classes and exchange the 
+// });

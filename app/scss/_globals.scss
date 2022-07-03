@@ -1,6 +1,7 @@
 html {
   font-size: 100%; //lets the user control the zoom level in their browser
   box-sizing: border-box; //makes the size of the elements include padding and border width in the final width
+  // position: relative;
 }
 
 *, *::after, *::before {
@@ -22,7 +23,6 @@ button {
   }
 }
 
-
 body {
   margin: 0;
   padding: 0;
@@ -37,6 +37,12 @@ body {
   // @include breakpoint-up(medium) {
   //   font-size: $font-med;
   // }
+  
+  // Center
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 h1 {
