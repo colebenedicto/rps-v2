@@ -49,7 +49,7 @@ function updateScoreAndMessage() {
   } else if (roundWinner === 'player') {
     message.textContent = `You win! ${capitalizeFirstLetter(playerChoice)} beats ${compChoice}.`;
   } else if (roundWinner === 'computer') {
-    message.textContent = `You lose! ${capitalizeFirstLetter(compChoice)} is beaten by ${playerChoice}.`;
+    message.textContent = `You lose! ${capitalizeFirstLetter(compChoice)} beats ${playerChoice}.`;
   }
 
   playerTally.textContent = `You: ${playerScore}`;
