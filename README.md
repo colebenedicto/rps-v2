@@ -20,8 +20,8 @@ Single player **Rock Paper Scissors Game** made with HTML, JavaScript, and SASS
                 <td>Hover States</td>
             </tr>
             <tr>
-                <td><img src="images/design/Desktop-start.png" width=50%></td>
-                <td><img src="images/design/Desktop-game-hover.png" width=50%></td>
+                <td><img src="images/design/Desktop-start.png"></td>
+                <td><img src="images/design/Desktop-game-hover.png"></td>
             </tr>
             </table>
 </details>
