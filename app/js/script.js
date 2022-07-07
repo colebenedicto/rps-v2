@@ -124,16 +124,3 @@ function playRound(playerSelection, compSelection) {
     } 
 }
 
-/* 
-Functionalities to add in the next version/update:
- updateRoundMessage function that does: _ beats _, _ is beaten by _, _ ties with _.
-*/
-
-// eventListener for message, playerTall, compTally, playerIcon, and compIcon to add a class that animates them every time they're updated
-
-
-// Animations
-
-// message.addEventListener('change', () => {
-//     // get all the classes and exchange the 
-// });
